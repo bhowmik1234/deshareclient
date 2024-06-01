@@ -49,13 +49,14 @@ const Dashboard = () => {
   const handleBoxClick = async (item) => {
     try {
       console.log(item.cid);
+      setIsPopupOpen(true);
       // https://bd-one-omega.vercel.app/
       // const res = await axios.get(`http://localhost:3000/img/${item.cid}`);
       //const res = await fetch(`https://amaranth-added-parrotfish-511.mypinata.cloud/ipfs/${item.cid}`);
       
       const url = `https://amaranth-added-parrotfish-511.mypinata.cloud/ipfs/${item.cid}`;
-      window.open(url,'_blank');
-      console.log(done);
+      // window.open(url,'_blank');
+      // console.log(done);
     } catch (error) {
       console.log(error);
     }
@@ -63,7 +64,7 @@ const Dashboard = () => {
 
   const handlePopupClose = () => {
     setIsPopupOpen(false);
-    window.location.reload();
+    // window.location.reload();
     setSelectedImage(null);
   };
 
