@@ -95,7 +95,7 @@ const Grantaccess = () => {
 
     const handleBoxClick = async (item) => {
         try {
-            const res = await axios.get(`http://localhost:3000/img/${item}`);
+            const res = await axios.get(`https://debackend-1.onrender.com/img/${item}`);
             setSelectedImage(imgFile); // Assuming res.data is the URL of the image
         } catch (error) {
             console.log(error);
